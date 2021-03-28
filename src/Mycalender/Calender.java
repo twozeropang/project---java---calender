@@ -36,20 +36,28 @@ public class Calender {
 
 		Scanner sc = new Scanner(System.in);
 		Calender cal = new Calender();
-		System.out.println("알고 싶은 월을 입력하세요");
-		int month = sc.nextInt();
+		System.out.println("반복횟수를 입력하세요.");
+
+		int cnt = sc.nextInt();
+		
 
 //		int[] maxDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		for (int i = 0; i < cnt; i++) {
 
+			System.out.println("알고 싶은 월을 입력하세요");
+			int month = sc.nextInt();
 //		System.out.printf("%d월은 %d일까지 있습니다.\n", month, maxDays[month-1]);
-		System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.GetMaxDaysOfMonth(month));
+			System.out.printf("%d월은 %d일까지 있습니다.\n", month, cal.GetMaxDaysOfMonth(month));
 
-		cal.printSampleCalendar();
+//		cal.printSampleCalendar();
+		}
+		System.out.println("Goodbye~");
 		sc.close();
 //		if(num%2==0) {
 //			System.out.printf("%d월의 최대 일수는 %d일입니다.", num, 30 );
 //		}else {
 //			System.out.printf("%d월의 최대 일수는 %d입니다.", num, 28);
 //		}
+
 	}
 }
